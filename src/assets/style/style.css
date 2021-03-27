@@ -1,0 +1,230 @@
+/* Start Main Component  */
+.main-component{
+    max-width: 90%;
+    max-height: 670px;
+    margin: auto;
+    overflow: hidden;
+}
+.main-component .background {
+    width: 90%;
+    max-height: 800px;
+    margin: auto;
+    position: relative;
+    border-radius: 10px;
+}
+.main-component .bacground-image{
+    width: 100%;
+    max-height: 800px;
+    height: 800px;
+}
+.main-component .temperature{
+    position: absolute;
+    top: 5%;
+    color: #fff;
+    transform: translate(16%, 70%);
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    -webkit-transform: translate(16%, 70%);
+    -moz-transform: translate(16%, 70%);
+    -ms-transform: translate(16%, 70%);
+    -o-transform: translate(16%, 70%);
+}
+.main-component .temperature h2{
+    margin: 0;
+}
+.main-component .temperature .CF{
+    display: flex;
+}
+.main-component .temperature .CF .active{
+    background: rgba(255, 255, 255, 0.25);
+}
+.main-component .temperature .CF .F.active{
+    border-left: 2px solid #fff;
+}
+.main-component .temperature .CF .C.active{
+    border-right: 2px solid #fff;
+}
+.main-component .temperature .CF div{
+    width: 40px;
+    height: 30px;
+    padding: 0 5px;
+    text-align: center;
+    line-height: 30px;
+    transition: background .5s ease-in-out;
+    cursor: pointer;
+}
+.main-component .currentlyComponent{
+    position: absolute;
+    top: 2%;
+    color: #fff;
+    transform: translate(16%, 70%);
+    width: 75%;
+}
+.main-component .container-time{
+    bottom: 33%;
+    width: 100%;
+    position: absolute;
+}
+.main-component .timing{
+    width: 75%;
+    margin: auto;
+    height: 75px;
+    padding: 20px 0;
+    color: #fff;
+    border-top: .5px solid #fff;
+    border-bottom: .5px solid #fff;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.main-component .choose-weather{
+    color: rgba(255, 255, 255, 0.75);
+    width: 75%;
+    margin: auto;
+    text-align: left;
+    margin-bottom: 1px;
+}
+.main-component .choose-weather span{
+cursor: pointer;
+transition: all .3s ease-in-out;
+margin-right: 20px;
+}
+.main-component .choose-weather .active{
+    border-bottom: 3px solid #fff;
+    color: #fff;
+}
+/* width */
+.main-component .timing::-webkit-scrollbar {
+  width: 0px;
+  height: 6px;
+}
+ 
+/* Handle */
+.main-component .timing::-webkit-scrollbar-thumb {
+  background: #fff; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.main-component .timing::-webkit-scrollbar-thumb:hover {
+  background: #999; 
+}
+.main-component .errorMsg{
+    width: 75%;
+    margin: auto;
+    padding: 15px;
+    background-color: #ff00006b;
+    border-left: 6px solid red;
+    border-radius: 5px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+/* Start hourly Component  */
+.hourly-component{
+    display: flex;
+    width: 100%;
+}
+.hourly-component .all-hours{
+    margin-right: 20px;
+}
+.hourly-component .all-hours span{
+width: max-content;
+}
+.hourly-component .hour{
+    font-size: 12px;
+}
+.hourly-component .icons{
+    width: 35px;
+    height: 45px;
+    margin: auto;
+}
+.hourly-component img.weather-icon{
+    width: 100%;
+}
+
+/* Start Daily Component  */
+.daily-component{
+    display: flex;
+    width: 100%;
+}
+.daily-component .all-days{
+    margin-right: 20px;
+}
+.all-days span{
+width: max-content;
+}
+.daily-component .day{
+    font-size: 12px;
+}
+.daily-component .icons{
+    width: 35px;
+    height: 45px;
+    margin: auto;
+}
+.daily-component img.weather-icon{
+    width: 100%;
+}
+
+/* Start Currently Component  */
+.currently-component{
+    width: 100%;
+}
+.currently-component .container{
+    display: flex;
+    justify-content: space-between;
+}
+.currently-component .container .name{
+    text-align: left;
+}
+.currently-component .container .name .icons{
+    width: 70px;
+}
+.currently-component .container .name .icons h3{
+    letter-spacing: 2px;
+    margin: 5px 0;
+    width: 150px;
+}
+.currently-component .container .temp{
+    direction: rtl;
+    text-align: right;
+}
+.currently-component .container h1{
+    margin: 0 0 5px 0;
+}
+.currently-component .container .temp h1{
+    font-size: 60px;
+}
+
+
+/* Start Media Query  */
+@media only screen and (max-width: 768px) {
+    .main-component .currentlyComponent {
+        transform: translate(5%, 53%);
+        width: 90%;
+    }
+    .currently-component .container,
+    .main-component .temperature{
+        display: block;
+    }
+    .currently-component .container .name,
+    .currently-component .container .temp{
+        text-align: center;
+        margin: auto;
+    }
+    .main-component .temperature{
+        border-bottom: .5px solid #fff;
+        /* margin-bottom: 10px; */
+    }
+    .main-component .temperature .CF{
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .main-component{
+        max-width: 100%;
+    }
+    .main-component .temperature h2{
+        font-size: 25px !important;
+    }
+}
